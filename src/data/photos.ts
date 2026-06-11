@@ -532,7 +532,7 @@ export const PHOTOS: Photo[] = [
     orientation: 'landscape',
     tags: ['landscape'],
     collection: ['work'],
-    forSale: false,
+    forSale: true,
     priceFrom: 95,
   },
   {
