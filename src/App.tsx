@@ -5,6 +5,7 @@ import { CartDrawer } from './components/CartDrawer'
 import { WorkPage } from './pages/WorkPage'
 import { AboutPage } from './pages/AboutPage'
 import { ShopPage } from './pages/ShopPage'
+import { CheckoutPage } from './pages/CheckoutPage'
 import { ThankYouPage } from './pages/ThankYouPage'
 import { Photo } from './data/photos'
 import { CartItem, Page } from './types'
@@ -45,6 +46,13 @@ export default function App() {
 
       {isThankYou ? (
         <ThankYouPage onGoShop={() => navigate('shop')} onGoWork={() => navigate('work')} />
+      ) : page === 'checkout' ? (
+        <CheckoutPage
+          items={cart}
+          onRemove={(idx) => setCart((c) => c.filter((_, i) => i !== idx))}
+          onBack={() => navigate('shop')}
+          onSuccess={() => navigate('work')}
+        />
       ) : (
         <>
           {page === 'work'  && <WorkPage  onOpen={setLightbox} onGoShop={() => navigate('shop')} />}
@@ -76,6 +84,7 @@ export default function App() {
         onClose={() => setCartOpen(false)}
         items={cart}
         onRemove={(idx) => setCart((c) => c.filter((_, i) => i !== idx))}
+        onCheckout={() => navigate('checkout')}
       />
     </div>
   )

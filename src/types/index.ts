@@ -1,4 +1,4 @@
-export type Page = 'work' | 'about' | 'shop'
+export type Page = 'work' | 'about' | 'shop' | 'checkout'
 
 export interface CartItem {
   photoId: string

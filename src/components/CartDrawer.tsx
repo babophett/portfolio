@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { CartItem } from '../types'
 import { T, font } from '../types/tokens'
 
@@ -7,42 +7,21 @@ interface Props {
   onClose: () => void
   items: CartItem[]
   onRemove: (index: number) => void
+  onCheckout: () => void
 }
 
-export function CartDrawer({ open, onClose, items, onRemove }: Props) {
-  const [loading, setLoading] = useState(false)
-  const [error, setError]     = useState<string | null>(null)
+export function CartDrawer({ open, onClose, items, onRemove, onCheckout }: Props) {
   const total = items.reduce((s, i) => s + i.price, 0)
 
   useEffect(() => {
-    if (!open) { setLoading(false); setError(null) }
     document.body.style.overflow = open ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
   }, [open])
-
-  const handleCheckout = async () => {
-    setLoading(true)
-    setError(null)
-    try {
-      const res = await fetch('/.netlify/functions/create-checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(items),
-      })
-      if (!res.ok) throw new Error(await res.text())
-      const { url } = await res.json()
-      window.location.href = url
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.')
-      setLoading(false)
-    }
-  }
 
   if (!open) return null
 
   return (
     <div className="fixed inset-0 z-50">
-      {/* Backdrop */}
       <div
         className="absolute inset-0"
         style={{ background: 'rgba(5,13,26,0.7)' }}
@@ -112,18 +91,12 @@ export function CartDrawer({ open, onClose, items, onRemove }: Props) {
                   ${total}
                 </span>
               </div>
-              {error && (
-                <p style={{ fontFamily: font.body, color: '#f87171' }} className="text-xs">
-                  {error}
-                </p>
-              )}
               <button
-                onClick={handleCheckout}
-                disabled={loading}
-                className="w-full py-3 text-sm rounded font-bold focus:outline-none disabled:opacity-60"
+                onClick={() => { onClose(); onCheckout() }}
+                className="w-full py-3 text-sm rounded font-bold focus:outline-none"
                 style={{ fontFamily: font.body, background: T.glow, color: T.ink }}
               >
-                {loading ? 'Redirecting…' : 'Checkout'}
+                Review order
               </button>
             </div>
           </>
