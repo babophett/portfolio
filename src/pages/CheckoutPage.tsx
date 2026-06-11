@@ -6,10 +6,9 @@ interface Props {
   items: CartItem[]
   onRemove: (index: number) => void
   onBack: () => void
-  onSuccess: () => void
 }
 
-export function CheckoutPage({ items, onRemove, onBack, onSuccess }: Props) {
+export function CheckoutPage({ items, onRemove, onBack }: Props) {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const total = items.reduce((s, i) => s + i.price, 0)

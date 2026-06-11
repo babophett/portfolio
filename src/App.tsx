@@ -51,7 +51,6 @@ export default function App() {
           items={cart}
           onRemove={(idx) => setCart((c) => c.filter((_, i) => i !== idx))}
           onBack={() => navigate('shop')}
-          onSuccess={() => navigate('work')}
         />
       ) : (
         <>
