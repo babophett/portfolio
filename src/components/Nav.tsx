@@ -31,7 +31,7 @@ export function Nav({ page, setPage, cartCount, onCartOpen }: Props) {
             ISAAC YAP
           </div>
           <div style={{ fontFamily: font.mono, color: T.muted }} className="text-[10px] tracking-widest mt-0.5">
-            FINE ART LANDSCAPE STILLS · FIELD LOG
+            FIELD LOG
           </div>
         </button>
 
