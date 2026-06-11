@@ -33,7 +33,7 @@ export function CartDrawer({ open, onClose, items, onRemove }: Props) {
       const { url } = await res.json()
       window.location.href = url
     } catch (err) {
-      setError('Something went wrong. Please try again.')
+      setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.')
       setLoading(false)
     }
   }
