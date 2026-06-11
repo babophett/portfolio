@@ -160,7 +160,7 @@ export const PHOTOS: Photo[] = [
   {
     id: 'fuji-silhouette',
     src: '/photos/fuji-silhouette.jpg',
-    title: 'The Mountain Behind the Sea',
+    title: 'Fujisan',
     location: 'Sagami Bay, Japan',
     coords: '35.32 N, 139.48 E',
     elevation: '0 m',
@@ -392,7 +392,7 @@ export const PHOTOS: Photo[] = [
     orientation: 'landscape',
     tags: ['landscape', 'alpine'],
     collection: ['work'],
-    forSale: false,
+    forSale: true,
     priceFrom: 85,
   },
   {
@@ -434,7 +434,7 @@ export const PHOTOS: Photo[] = [
     orientation: 'landscape',
     tags: ['landscape', 'desert'],
     collection: ['work'],
-    forSale: false,
+    forSale: true,
     priceFrom: 85,
   },
   {
@@ -490,7 +490,7 @@ export const PHOTOS: Photo[] = [
     orientation: 'portrait',
     tags: ['coastal'],
     collection: ['work'],
-    forSale: false,
+    forSale: true,
     priceFrom: 85,
   },
   {
