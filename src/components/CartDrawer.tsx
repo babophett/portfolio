@@ -7,10 +7,9 @@ interface Props {
   onClose: () => void
   items: CartItem[]
   onRemove: (index: number) => void
-  onClear: () => void
 }
 
-export function CartDrawer({ open, onClose, items, onRemove, onClear }: Props) {
+export function CartDrawer({ open, onClose, items, onRemove }: Props) {
   const [loading, setLoading] = useState(false)
   const [error, setError]     = useState<string | null>(null)
   const total = items.reduce((s, i) => s + i.price, 0)

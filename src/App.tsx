@@ -75,7 +75,6 @@ export default function App() {
         onClose={() => setCartOpen(false)}
         items={cart}
         onRemove={(idx) => setCart((c) => c.filter((_, i) => i !== idx))}
-        onClear={() => setCart([])}
       />
     </div>
   )
