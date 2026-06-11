@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { PHOTOS, Photo, PRINT_SIZES, PRINT_PAPERS, PrintSizeId, PrintPaperId } from '../data/photos'
+import { PHOTOS, Photo, PRINT_SIZES, PORTRAIT_PRINT_SIZES, PRINT_PAPERS, AnySizeId, PrintPaperId } from '../data/photos'
 import { FieldNote } from '../components/FieldNote'
 import { CartItem } from '../types'
 import { T, font } from '../types/tokens'
@@ -47,11 +47,12 @@ interface CardProps {
 }
 
 function ShopCard({ photo, onAddToCart, onOpen }: CardProps) {
-  const [sizeId, setSizeId] = useState<PrintSizeId>(PRINT_SIZES[0].id)
+  const sizes = photo.orientation === 'portrait' ? PORTRAIT_PRINT_SIZES : PRINT_SIZES
+  const [sizeId, setSizeId] = useState<AnySizeId>(sizes[0].id)
   const [paperId, setPaperId] = useState<PrintPaperId>(PRINT_PAPERS[0].id)
   const [added, setAdded] = useState(false)
 
-  const size  = PRINT_SIZES.find((s) => s.id === sizeId)!
+  const size  = sizes.find((s) => s.id === sizeId)!
   const paper = PRINT_PAPERS.find((p) => p.id === paperId)!
   const price = photo.priceFrom + size.priceDelta + paper.priceDelta
 
@@ -89,7 +90,7 @@ function ShopCard({ photo, onAddToCart, onOpen }: CardProps) {
 
         {/* Size picker */}
         <div className="flex flex-wrap gap-2">
-          {PRINT_SIZES.map((s) => (
+          {sizes.map((s) => (
             <button
               key={s.id}
               onClick={() => setSizeId(s.id)}

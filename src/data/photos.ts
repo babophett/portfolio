@@ -383,7 +383,7 @@ export const PHOTOS: Photo[] = [
   },
   {
     id: 'silver-mirror',
-    src: '/photos/DSCF3243.JPG',
+    src: '/photos/still.JPG',
     title: 'Still Season',
     location: 'Mountain lake, undisclosed',
     coords: '—',
@@ -394,20 +394,6 @@ export const PHOTOS: Photo[] = [
     collection: ['work'],
     forSale: true,
     priceFrom: 85,
-  },
-  {
-    id: 'powder-carve',
-    src: '/photos/DSCF3300.JPG',
-    title: 'Soft Snow',
-    location: 'Storm day, undisclosed',
-    coords: '—',
-    elevation: '3,000 m',
-    season: 'Deep winter',
-    orientation: 'landscape',
-    tags: ['ski', 'alpine'],
-    collection: ['work'],
-    forSale: false,
-    priceFrom: 95,
   },
   {
     id: 'malibu-canyon',
@@ -564,6 +550,35 @@ export const PHOTOS: Photo[] = [
     priceFrom: 85,
   },
 
+  {
+    id: 'alpine-sentinel',
+    src: '/photos/solitude.JPG',
+    title: 'Solitude',
+    location: 'Alps, undisclosed',
+    coords: '—',
+    elevation: '1,200 m',
+    season: 'Summer',
+    orientation: 'landscape',
+    tags: ['landscape', 'alpine', 'storm'],
+    collection: ['work'],
+    forSale: true,
+    priceFrom: 95,
+  },
+  {
+    id: 'alpine-torrent',
+    src: '/photos/rosenlaui.JPG',
+    title: 'The Torrent',
+    location: 'Alps, undisclosed',
+    coords: '—',
+    elevation: '900 m',
+    season: 'Summer',
+    orientation: 'portrait',
+    tags: ['landscape', 'alpine'],
+    collection: ['work'],
+    forSale: true,
+    priceFrom: 95,
+  },
+
   // ── ABOUT PAGE ONLY ──────────────────────────────────────────
   {
     id: 'cliff-drop',
@@ -626,10 +641,15 @@ export const PHOTOS: Photo[] = [
 // ── PRINT SIZES ─────────────────────────────────────────────────
 // To add a new size, paste a new object here. It appears in the shop automatically.
 export const PRINT_SIZES = [
-  { id: '24x16',  label: '24 × 16" (2 × 1.33 ft)',     priceDelta: 0 },
-  { id: '48x32',  label: '48 × 32" (4 × 2.7 ft)',      priceDelta: 100 },
-  { id: '72x48',  label: '72 × 48" (6 × 4 ft)',         priceDelta: 200 },
-  { id: '100x67', label: '100 × 67" (8.4 × 5.6 ft)',    priceDelta: 300 },
+  { id: '12x18', label: '12 × 18"', priceDelta: 0 },
+  { id: '16x24', label: '16 × 24"', priceDelta: 60 },
+  { id: '24x36', label: '24 × 36"', priceDelta: 160 },
+] as const
+
+export const PORTRAIT_PRINT_SIZES = [
+  { id: '32x48',  label: '32 × 48" (2.7 × 4 ft)',   priceDelta: 0 },
+  { id: '48x72',  label: '48 × 72" (4 × 6 ft)',      priceDelta: 60 },
+  { id: '67x100', label: '67 × 100" (5.6 × 8.4 ft)', priceDelta: 160 },
 ] as const
 
 // ── PRINT PAPERS ────────────────────────────────────────────────
@@ -638,5 +658,7 @@ export const PRINT_PAPERS = [
   { id: 'metal',  label: 'Metal (ChromaLuxe)', priceDelta: 40 },
 ] as const
 
-export type PrintSizeId  = typeof PRINT_SIZES[number]['id']
-export type PrintPaperId = typeof PRINT_PAPERS[number]['id']
+export type PrintSizeId         = typeof PRINT_SIZES[number]['id']
+export type PortraitPrintSizeId = typeof PORTRAIT_PRINT_SIZES[number]['id']
+export type AnySizeId           = PrintSizeId | PortraitPrintSizeId
+export type PrintPaperId        = typeof PRINT_PAPERS[number]['id']
