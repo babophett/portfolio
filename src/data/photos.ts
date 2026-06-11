@@ -60,7 +60,7 @@ export const PHOTOS: Photo[] = [
   {
     id: 'oeschinen-alpenglow',
     src: '/photos/oeschinen-alpenglow.jpg',
-    title: 'Alpenglow, Oeschinensee',
+    title: 'Alpenglow',
     location: 'Kandersteg, Switzerland',
     coords: '46.49 N, 7.73 E',
     elevation: '1,578 m',

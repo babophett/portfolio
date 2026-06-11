@@ -15,7 +15,7 @@ export function WorkPage({ onOpen, onGoShop }: Props) {
   const [activeTag, setActiveTag] = useState<Tag | null>(null)
 
   const workPhotos = PHOTOS.filter((p) => p.collection.includes('work'))
-  const hero = workPhotos[0]
+  const hero = workPhotos.find((p) => p.id === 'oeschinen-alpenglow') ?? workPhotos[0]
 
   const filtered = activeTag
     ? workPhotos.filter((p) => p.tags.includes(activeTag))
