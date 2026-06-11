@@ -11,14 +11,33 @@ interface Props {
 }
 
 export function CartDrawer({ open, onClose, items, onRemove, onClear }: Props) {
-  const [done, setDone] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError]     = useState<string | null>(null)
   const total = items.reduce((s, i) => s + i.price, 0)
 
   useEffect(() => {
-    if (!open) setDone(false)
+    if (!open) { setLoading(false); setError(null) }
     document.body.style.overflow = open ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
   }, [open])
+
+  const handleCheckout = async () => {
+    setLoading(true)
+    setError(null)
+    try {
+      const res = await fetch('/.netlify/functions/create-checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(items),
+      })
+      if (!res.ok) throw new Error(await res.text())
+      const { url } = await res.json()
+      window.location.href = url
+    } catch (err) {
+      setError('Something went wrong. Please try again.')
+      setLoading(false)
+    }
+  }
 
   if (!open) return null
 
@@ -51,16 +70,7 @@ export function CartDrawer({ open, onClose, items, onRemove, onClear }: Props) {
           </button>
         </div>
 
-        {done ? (
-          <div className="flex-1 flex flex-col justify-center gap-3">
-            <div style={{ fontFamily: font.display, color: T.glow }} className="text-3xl tracking-wide">
-              ORDER LOGGED.
-            </div>
-            <p style={{ fontFamily: font.body, color: T.muted }} className="text-sm leading-relaxed">
-              This is a demo — connect Stripe or Shopify when you go live. Prints would ship in 7–10 days.
-            </p>
-          </div>
-        ) : items.length === 0 ? (
+        {items.length === 0 ? (
           <p style={{ fontFamily: font.body, color: T.muted }} className="text-sm">
             Nothing here yet. Head to the print shop to pick a frame.
           </p>
@@ -103,12 +113,18 @@ export function CartDrawer({ open, onClose, items, onRemove, onClear }: Props) {
                   ${total}
                 </span>
               </div>
+              {error && (
+                <p style={{ fontFamily: font.body, color: '#f87171' }} className="text-xs">
+                  {error}
+                </p>
+              )}
               <button
-                onClick={() => { setDone(true); onClear() }}
-                className="w-full py-3 text-sm rounded font-bold focus:outline-none"
+                onClick={handleCheckout}
+                disabled={loading}
+                className="w-full py-3 text-sm rounded font-bold focus:outline-none disabled:opacity-60"
                 style={{ fontFamily: font.body, background: T.glow, color: T.ink }}
               >
-                Checkout
+                {loading ? 'Redirecting…' : 'Checkout'}
               </button>
             </div>
           </>
