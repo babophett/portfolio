@@ -553,16 +553,17 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'coastal'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 95,
+    priceFrom: 200,
   },
 ]
 
 // ── PRINT SIZES ─────────────────────────────────────────────────
 // To add a new size, paste a new object here. It appears in the shop automatically.
 export const PRINT_SIZES = [
-  { id: '12x18', label: '12 × 18"', priceDelta: 0 },
-  { id: '16x24', label: '16 × 24"', priceDelta: 60 },
-  { id: '24x36', label: '24 × 36"', priceDelta: 160 },
+  { id: '100x67', label: '24 x 16" (2 x 1.33 ft)',    priceDelta: 0 },
+  { id: '48x32',  label: '48 × 32" (4 × 2.7 ft)',      priceDelta: 100 },
+  { id: '72x48',  label: '72 × 48" (6 × 4 ft)',         priceDelta: 200 },
+  { id: '100x67', label: '100 × 67" (8.4 × 5.6 ft)',    priceDelta: 300 },
 ] as const
 
 // ── PRINT PAPERS ────────────────────────────────────────────────
