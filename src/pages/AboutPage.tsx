@@ -63,28 +63,38 @@ export function AboutPage({ onGoShop }: Props) {
       <div className="grid grid-cols-3 gap-3">
         {landscapes.flatMap((land, i) => {
           const port = portraits[i]
-          const cells = [
+          const reversed = i === 1
+
+          const landFig = (
             <figure
               key={land.id}
               className="col-span-2 rounded overflow-hidden"
               style={{ height: 340, background: T.panel, border: `1px solid ${T.panelEdge}` }}
             >
               <img src={land.src} alt={land.title} className="w-full h-full object-cover" />
-            </figure>,
-          ]
-          if (port) {
-            cells.push(
-              <figure
-                key={port.id}
-                className="col-span-1 rounded overflow-hidden"
-                style={{ height: 340, background: T.panel, border: `1px solid ${T.panelEdge}` }}
-              >
-                <img src={port.src} alt={port.title} className="w-full h-full object-cover" />
-              </figure>
-            )
-          }
-          return cells
+            </figure>
+          )
+          const portFig = port ? (
+            <figure
+              key={port.id}
+              className="col-span-1 rounded overflow-hidden"
+              style={{ height: 340, background: T.panel, border: `1px solid ${T.panelEdge}` }}
+            >
+              <img src={port.src} alt={port.title} className="w-full h-full object-cover" />
+            </figure>
+          ) : null
+
+          return reversed && portFig ? [portFig, landFig] : portFig ? [landFig, portFig] : [landFig]
         })}
+        {portraits.slice(landscapes.length).map((port) => (
+          <figure
+            key={port.id}
+            className="col-span-1 rounded overflow-hidden"
+            style={{ height: 340, background: T.panel, border: `1px solid ${T.panelEdge}` }}
+          >
+            <img src={port.src} alt={port.title} className="w-full h-full object-cover" />
+          </figure>
+        ))}
       </div>
     </main>
   )
