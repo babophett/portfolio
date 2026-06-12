@@ -243,7 +243,7 @@ export const PHOTOS: Photo[] = [
   },
   {
     id: 'open-canvas',
-    src: '/photos/DSCF3273.JPG',
+    src: '/photos/blankcanvas.JPG',
     title: 'Open Canvas',
     location: 'Alps, undisclosed',
     coords: '—',
