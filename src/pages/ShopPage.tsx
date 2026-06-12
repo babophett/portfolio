@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { PHOTOS, Photo, PRINT_SIZES, PRINT_PAPERS, PrintSizeId, PrintPaperId } from '../data/photos'
+import { PHOTOS, Photo, PRINT_SIZES, PORTRAIT_PRINT_SIZES, PRINT_PAPERS, AnySizeId, PrintPaperId } from '../data/photos'
 import { FieldNote } from '../components/FieldNote'
 import { CartItem } from '../types'
 import { T, font } from '../types/tokens'
@@ -10,7 +10,12 @@ interface Props {
 }
 
 export function ShopPage({ onAddToCart, onOpen }: Props) {
-  const forSale = PHOTOS.filter((p) => p.forSale)
+  const forSale    = PHOTOS.filter((p) => p.forSale)
+  const portraits  = forSale.filter((p) => p.orientation === 'portrait')
+  const landscapes = forSale.filter((p) => p.orientation === 'landscape')
+  const half       = Math.ceil(landscapes.length / 2)
+  const leftCol    = landscapes.slice(0, half)
+  const rightCol   = landscapes.slice(half)
 
   return (
     <main className="max-w-6xl mx-auto px-5 py-12">
@@ -29,10 +34,22 @@ export function ShopPage({ onAddToCart, onOpen }: Props) {
         signed on the back with its field note. Ships flat or in a tube within 7–10 days.
       </p>
 
-      <div className="grid sm:grid-cols-2 gap-6 mt-12 items-start">
-        {forSale.map((p) => (
-          <ShopCard key={p.id} photo={p} onAddToCart={onAddToCart} onOpen={onOpen} />
-        ))}
+      <div className="grid md:grid-cols-3 gap-6 mt-12 items-start">
+        <div className="flex flex-col gap-6">
+          {leftCol.map((p) => (
+            <ShopCard key={p.id} photo={p} onAddToCart={onAddToCart} onOpen={onOpen} />
+          ))}
+        </div>
+        <div className="flex flex-col gap-6">
+          {portraits.map((p) => (
+            <ShopCard key={p.id} photo={p} onAddToCart={onAddToCart} onOpen={onOpen} />
+          ))}
+        </div>
+        <div className="flex flex-col gap-6">
+          {rightCol.map((p) => (
+            <ShopCard key={p.id} photo={p} onAddToCart={onAddToCart} onOpen={onOpen} />
+          ))}
+        </div>
       </div>
     </main>
   )
@@ -47,11 +64,13 @@ interface CardProps {
 }
 
 function ShopCard({ photo, onAddToCart, onOpen }: CardProps) {
-  const [sizeId, setSizeId] = useState<PrintSizeId>(PRINT_SIZES[0].id)
+  const VERTICAL_IDS = ['fuji-silhouette', 'alpine-torrent']
+  const sizes = VERTICAL_IDS.includes(photo.id) ? PORTRAIT_PRINT_SIZES : PRINT_SIZES
+  const [sizeId, setSizeId] = useState<AnySizeId>(sizes[0].id)
   const [paperId, setPaperId] = useState<PrintPaperId>(PRINT_PAPERS[0].id)
   const [added, setAdded] = useState(false)
 
-  const size  = PRINT_SIZES.find((s) => s.id === sizeId)!
+  const size  = sizes.find((s) => s.id === sizeId)!
   const paper = PRINT_PAPERS.find((p) => p.id === paperId)!
   const price = photo.priceFrom + size.priceDelta + paper.priceDelta
 
@@ -89,7 +108,7 @@ function ShopCard({ photo, onAddToCart, onOpen }: CardProps) {
 
         {/* Size picker */}
         <div className="flex flex-wrap gap-2">
-          {PRINT_SIZES.map((s) => (
+          {sizes.map((s) => (
             <button
               key={s.id}
               onClick={() => setSizeId(s.id)}

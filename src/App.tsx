@@ -70,6 +70,13 @@ export default function App() {
         <div style={{ fontFamily: font.mono, color: T.muted }} className="text-xs">
           PRINTS SHIP WORLDWIDE
         </div>
+        <a
+          href="mailto:support@isaacyap.us"
+          style={{ fontFamily: font.mono, color: T.muted }}
+          className="text-xs hover:underline"
+        >
+          support@isaacyap.us
+        </a>
       </footer>
 
       <Lightbox

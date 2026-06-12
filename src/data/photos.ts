@@ -252,7 +252,7 @@ export const PHOTOS: Photo[] = [
     orientation: 'landscape',
     tags: ['ski', 'alpine'],
     collection: ['work'],
-    forSale: false,
+    forSale: true,
     priceFrom: 95,
   },
   {
@@ -602,7 +602,7 @@ export const PHOTOS: Photo[] = [
     orientation: 'portrait',
     tags: ['landscape', 'alpine'],
     collection: ['work'],
-    forSale: false,
+    forSale: true,
     priceFrom: 95,
   },
 
@@ -673,11 +673,19 @@ export const PRINT_SIZES = [
   { id: '72x48', label: '72 × 48" (6 × 4 ft)',   priceDelta: 160 },
 ] as const
 
+export const PORTRAIT_PRINT_SIZES = [
+  { id: '16x24', label: '16 × 24"',              priceDelta: 0 },
+  { id: '32x48', label: '32 × 48" (2.7 × 4 ft)', priceDelta: 60 },
+  { id: '48x72', label: '48 × 72" (4 × 6 ft)',   priceDelta: 160 },
+] as const
+
 // ── PRINT PAPERS ────────────────────────────────────────────────
 export const PRINT_PAPERS = [
   { id: 'matte',  label: 'Archival matte',    priceDelta: 0 },
   { id: 'metal',  label: 'Metal (ChromaLuxe)', priceDelta: 40 },
 ] as const
 
-export type PrintSizeId  = typeof PRINT_SIZES[number]['id']
-export type PrintPaperId = typeof PRINT_PAPERS[number]['id']
+export type PrintSizeId         = typeof PRINT_SIZES[number]['id']
+export type PortraitPrintSizeId = typeof PORTRAIT_PRINT_SIZES[number]['id']
+export type AnySizeId           = PrintSizeId | PortraitPrintSizeId
+export type PrintPaperId        = typeof PRINT_PAPERS[number]['id']

@@ -32,6 +32,9 @@ export function AboutPage({ onGoShop }: Props) {
           <p style={{ fontFamily: font.body, color: T.muted }} className="leading-relaxed">
             Winters are spent in the Colorado backcountry and Eastern Sierras. Summers are reserved for the surf and the vertical realm.
           </p>
+          <p style={{ fontFamily: font.body, color: T.muted }} className="leading-relaxed">
+            Contact me for inquiries and print special requests: support@isaacyap.us
+          </p>
         </div>
         <div className="space-y-4">
           <div
