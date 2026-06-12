@@ -29,7 +29,7 @@ export function ShopPage({ onAddToCart, onOpen }: Props) {
         signed on the back with its field note. Ships flat or in a tube within 7–10 days.
       </p>
 
-      <div className="grid sm:grid-cols-2 gap-6 mt-12">
+      <div className="grid sm:grid-cols-2 gap-6 mt-12 items-start">
         {forSale.map((p) => (
           <ShopCard key={p.id} photo={p} onAddToCart={onAddToCart} onOpen={onOpen} />
         ))}
