@@ -69,7 +69,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'alpine'],
     collection: ['work'],
     forSale: true,
-    priceFrom: 100,
+    priceFrom: 120,
   },
   {
     id: 'brienz-castle',
@@ -155,7 +155,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'alpine'],
     collection: ['work'],
     forSale: true,
-    priceFrom: 100,
+    priceFrom: 120,
   },
   {
     id: 'sierra-lake-panorama',
@@ -421,7 +421,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'alpine', 'storm'],
     collection: ['work'],
     forSale: true,
-    priceFrom: 100,
+    priceFrom: 90,
   },
   {
     id: 'autumn-passage',
@@ -505,7 +505,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape'],
     collection: ['work'],
     forSale: true,
-    priceFrom: 100,
+    priceFrom: 80,
   },
   {
     id: 'malibu-canyon',
@@ -603,7 +603,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'alpine'],
     collection: ['work'],
     forSale: true,
-    priceFrom: 100,
+    priceFrom: 120,
   },
 
   // ── ABOUT PAGE ONLY ──────────────────────────────────────────
