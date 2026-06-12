@@ -33,6 +33,9 @@ export function ShopPage({ onAddToCart, onOpen }: Props) {
         Each frame is printed in an edition of 50 on archival matte paper or ChromaLuxe metal,
         signed on the back with its field note. Ships flat or in a tube within 7–14 days. Prints ship worldwide. Special print requests can be directed to support@isaacyap.us
       </p>
+      <p style={{ fontFamily: font.body, color: T.muted }} className="mt-5 max-w-xl leading-relaxed">
+        Special print requests can be directed to support@isaacyap.us
+      </p>
 
       <div className="grid md:grid-cols-3 gap-6 mt-12 items-start">
         <div className="flex flex-col gap-6">
