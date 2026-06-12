@@ -78,7 +78,12 @@ function ShopCard({ photo, onAddToCart, onOpen }: CardProps) {
         src={photo.src}
         alt={photo.title}
         loading="lazy"
-        className="w-full aspect-[4/3] object-cover cursor-zoom-in"
+        className={`w-full cursor-zoom-in ${
+          photo.orientation === 'portrait'
+            ? 'aspect-[2/3] object-contain'
+            : 'aspect-[4/3] object-cover'
+        }`}
+        style={photo.orientation === 'portrait' ? { background: T.panel } : undefined}
         onClick={() => onOpen(photo)}
       />
 
