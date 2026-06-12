@@ -55,7 +55,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'coastal'],
     collection: ['work'],
     forSale: true,
-    priceFrom: 100,
+    priceFrom: 210,
   },
   {
     id: 'oeschinen-alpenglow',
@@ -69,7 +69,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'alpine'],
     collection: ['work'],
     forSale: true,
-    priceFrom: 120,
+    priceFrom: 220,
   },
   {
     id: 'brienz-castle',
@@ -83,7 +83,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 90,
+    priceFrom: 190,
   },
   {
     id: 'jackson-pump',
@@ -97,7 +97,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'storm'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 90,
+    priceFrom: 190,
   },
 
   // ── GALLERY — ordered P, L, L to balance 3-column masonry ────
@@ -113,7 +113,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'storm'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 100,
+    priceFrom: 300,
   },
   {
     id: 'mcway-cove',
@@ -127,7 +127,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'coastal'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 90,
+    priceFrom: 190,
   },
   {
     id: 'fuji-silhouette',
@@ -141,7 +141,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape'],
     collection: ['work'],
     forSale: true,
-    priceFrom: 100,
+    priceFrom: 200,
   },
   {
     id: 'sneffels-glow',
@@ -155,7 +155,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'alpine'],
     collection: ['work'],
     forSale: true,
-    priceFrom: 120,
+    priceFrom: 220,
   },
   {
     id: 'sierra-lake-panorama',
@@ -169,7 +169,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'alpine', 'storm'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 100,
+    priceFrom: 200,
   },
   {
     id: 'alpine-ascent',
@@ -183,7 +183,7 @@ export const PHOTOS: Photo[] = [
     tags: ['ski', 'alpine'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 100,
+    priceFrom: 200,
   },
   {
     id: 'skin-track',
@@ -197,7 +197,7 @@ export const PHOTOS: Photo[] = [
     tags: ['ski', 'alpine'],
     collection: ['work'],
     forSale: true,
-    priceFrom: 100,
+    priceFrom: 170,
   },
   {
     id: 'range-glow',
@@ -211,7 +211,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'alpine'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 100,
+    priceFrom: 200,
   },
   {
     id: 'zion-narrows',
@@ -225,7 +225,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'desert'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 100,
+    priceFrom: 200,
   },
   {
     id: 'bryce-storm',
@@ -239,7 +239,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'desert', 'storm'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 90,
+    priceFrom: 190,
   },
   {
     id: 'open-canvas',
@@ -253,7 +253,7 @@ export const PHOTOS: Photo[] = [
     tags: ['ski', 'alpine'],
     collection: ['work'],
     forSale: true,
-    priceFrom: 100,
+    priceFrom: 200,
   },
   {
     id: 'matterhorn-chalet',
@@ -267,7 +267,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'alpine'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 100,
+    priceFrom: 200,
   },
   {
     id: 'starfall-village',
@@ -281,7 +281,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'alpine'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 90,
+    priceFrom: 190,
   },
   {
     id: 'canyon-burn',
@@ -295,7 +295,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'desert'],
     collection: ['work'],
     forSale: true,
-    priceFrom: 90,
+    priceFrom: 190,
   },
   {
     id: 'blossom-departure',
@@ -309,7 +309,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 90,
+    priceFrom: 190,
   },
   {
     id: 'high-country-storm',
@@ -323,7 +323,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'alpine', 'storm'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 90,
+    priceFrom: 190,
   },
   {
     id: 'big-sur-pelicans',
@@ -337,7 +337,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'coastal'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 90,
+    priceFrom: 190,
   },
   {
     id: 'dream-lake-sunrise',
@@ -351,7 +351,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'alpine'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 100,
+    priceFrom: 200,
   },
   {
     id: 'grindelwald-cable',
@@ -365,7 +365,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'alpine'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 100,
+    priceFrom: 200,
   },
   {
     id: 'silver-mirror',
@@ -379,7 +379,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'alpine'],
     collection: ['work'],
     forSale: true,
-    priceFrom: 90,
+    priceFrom: 190,
   },
   {
     id: 'sierra-approach',
@@ -393,7 +393,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'desert', 'alpine'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 90,
+    priceFrom: 190,
   },
   {
     id: 'great-sand-dunes',
@@ -407,7 +407,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'desert'],
     collection: ['work'],
     forSale: true,
-    priceFrom: 90,
+    priceFrom: 180,
   },
   {
     id: 'alpine-sentinel',
@@ -421,7 +421,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'alpine', 'storm'],
     collection: ['work'],
     forSale: true,
-    priceFrom: 90,
+    priceFrom: 190,
   },
   {
     id: 'autumn-passage',
@@ -435,7 +435,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 90,
+    priceFrom: 190,
   },
   {
     id: 'alpine-embrace',
@@ -449,7 +449,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'storm'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 90,
+    priceFrom: 190,
   },
   {
     id: 'bixby-fog',
@@ -463,7 +463,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'coastal'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 100,
+    priceFrom: 200,
   },
   {
     id: 'big-sur-surfer',
@@ -477,7 +477,7 @@ export const PHOTOS: Photo[] = [
     tags: ['coastal'],
     collection: ['work'],
     forSale: true,
-    priceFrom: 90,
+    priceFrom: 190,
   },
   {
     id: 'storm-pass',
@@ -491,7 +491,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'storm'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 90,
+    priceFrom: 190,
   },
   {
     id: 'cathedral-rays',
@@ -505,7 +505,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape'],
     collection: ['work'],
     forSale: true,
-    priceFrom: 80,
+    priceFrom: 170,
   },
   {
     id: 'malibu-canyon',
@@ -519,7 +519,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 90,
+    priceFrom: 190,
   },
   {
     id: 'lucerne-break',
@@ -533,7 +533,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 90,
+    priceFrom: 190,
   },
   {
     id: 'lone-pine-dusk',
@@ -547,7 +547,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'desert', 'alpine'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 90,
+    priceFrom: 170,
   },
   {
     id: 'bixby-overlook',
@@ -561,7 +561,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'coastal'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 90,
+    priceFrom: 190,
   },
   {
     id: 'alpine-pasture',
@@ -575,7 +575,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'alpine'],
     collection: ['work'],
     forSale: false,
-    priceFrom: 100,
+    priceFrom: 200,
   },
   {
     id: 'glacial-valley',
@@ -589,7 +589,7 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'alpine', 'storm'],
     collection: ['work'],
     forSale: true,
-    priceFrom: 90,
+    priceFrom: 190,
   },
   {
     id: 'alpine-torrent',
@@ -603,7 +603,22 @@ export const PHOTOS: Photo[] = [
     tags: ['landscape', 'alpine'],
     collection: ['work'],
     forSale: true,
-    priceFrom: 120,
+    priceFrom: 220,
+  },
+
+  {
+    id: 'ember-road',
+    src: '/photos/ember-road.jpg',
+    title: 'Ember Road',
+    location: 'Colorado Rockies',
+    coords: '—',
+    elevation: '2,800 m',
+    season: 'Early spring',
+    orientation: 'landscape',
+    tags: ['landscape', 'alpine'],
+    collection: ['work'],
+    forSale: false,
+    priceFrom: 170,
   },
 
   // ── ABOUT PAGE ONLY ──────────────────────────────────────────
@@ -619,7 +634,7 @@ export const PHOTOS: Photo[] = [
     tags: ['ski', 'alpine'],
     collection: ['about'],
     forSale: false,
-    priceFrom: 100,
+    priceFrom: 200,
   },
   {
     id: 'powder-slash',
@@ -633,7 +648,7 @@ export const PHOTOS: Photo[] = [
     tags: ['ski', 'storm'],
     collection: ['about'],
     forSale: false,
-    priceFrom: 100,
+    priceFrom: 200,
   },
   {
     id: 'frozen-lake',
@@ -647,7 +662,7 @@ export const PHOTOS: Photo[] = [
     tags: ['alpine', 'storm'],
     collection: ['about'],
     forSale: false,
-    priceFrom: 100,
+    priceFrom: 200,
   },
   {
     id: 'whiteout',
@@ -661,7 +676,7 @@ export const PHOTOS: Photo[] = [
     tags: ['alpine', 'storm'],
     collection: ['about'],
     forSale: false,
-    priceFrom: 100,
+    priceFrom: 200,
   },
 ]
 

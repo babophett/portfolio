@@ -30,11 +30,14 @@ export function ShopPage({ onAddToCart, onOpen }: Props) {
         SIGNED & NUMBERED.
       </h1>
       <p style={{ fontFamily: font.body, color: T.muted }} className="mt-5 max-w-xl leading-relaxed">
-        Each frame is printed in an edition of 50 on archival matte paper or ChromaLuxe metal,
-        signed on the back with its field note. Ships flat or in a tube within 7–14 days. Prints ship worldwide. Special print requests can be directed to support@isaacyap.us
+        Every photographic print is produced in-house, using archival grade pigmented ink on premium archival photo paper. Each print includes a hand signed and numbered certificate of authenticity by the artist Isaac Yap with its field note. 
+      </p>
+       <p style={{ fontFamily: font.body, color: T.muted }} className="mt-5 max-w-xl leading-relaxed">
+        Unframed prints are rolled on shipping roll with a protective layer of acid-free paper and an additional layer of foam in a sturdy shipping box. 
+        We recommend only unrolling the print with your trusted local framer to ensure that it is kept in-tact prior to framing. Unframed prints ship for free in the US, international orders have a flat fee of $50.
       </p>
       <p style={{ fontFamily: font.body, color: T.muted }} className="mt-5 max-w-xl leading-relaxed">
-        Special print requests can be directed to support@isaacyap.us
+        Special print requests or custom framing can be directed to support@isaacyap.us
       </p>
 
       <div className="grid md:grid-cols-3 gap-6 mt-12 items-start">
