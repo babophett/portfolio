@@ -580,7 +580,7 @@ export const PHOTOS: Photo[] = [
   {
     id: 'glacial-valley',
     src: '/photos/glacial-valley.jpg',
-    title: 'Stone and Cloud',
+    title: 'Glacial Basin',
     location: 'Alps, undisclosed',
     coords: '—',
     elevation: '1,700 m',
@@ -588,7 +588,7 @@ export const PHOTOS: Photo[] = [
     orientation: 'landscape',
     tags: ['landscape', 'alpine', 'storm'],
     collection: ['work'],
-    forSale: false,
+    forSale: true,
     priceFrom: 85,
   },
   {
@@ -602,7 +602,7 @@ export const PHOTOS: Photo[] = [
     orientation: 'portrait',
     tags: ['landscape', 'alpine'],
     collection: ['work'],
-    forSale: true,
+    forSale: false,
     priceFrom: 95,
   },
 
@@ -668,15 +668,9 @@ export const PHOTOS: Photo[] = [
 // ── PRINT SIZES ─────────────────────────────────────────────────
 // To add a new size, paste a new object here. It appears in the shop automatically.
 export const PRINT_SIZES = [
-  { id: '12x18', label: '12 × 18"', priceDelta: 0 },
-  { id: '16x24', label: '16 × 24"', priceDelta: 60 },
-  { id: '24x36', label: '24 × 36"', priceDelta: 160 },
-] as const
-
-export const PORTRAIT_PRINT_SIZES = [
-  { id: '32x48',  label: '32 × 48" (2.7 × 4 ft)',   priceDelta: 0 },
-  { id: '48x72',  label: '48 × 72" (4 × 6 ft)',      priceDelta: 60 },
-  { id: '67x100', label: '67 × 100" (5.6 × 8.4 ft)', priceDelta: 160 },
+  { id: '24x16', label: '24 × 16"',              priceDelta: 0 },
+  { id: '48x32', label: '48 × 32" (4 × 2.7 ft)', priceDelta: 60 },
+  { id: '72x48', label: '72 × 48" (6 × 4 ft)',   priceDelta: 160 },
 ] as const
 
 // ── PRINT PAPERS ────────────────────────────────────────────────
@@ -685,7 +679,5 @@ export const PRINT_PAPERS = [
   { id: 'metal',  label: 'Metal (ChromaLuxe)', priceDelta: 40 },
 ] as const
 
-export type PrintSizeId         = typeof PRINT_SIZES[number]['id']
-export type PortraitPrintSizeId = typeof PORTRAIT_PRINT_SIZES[number]['id']
-export type AnySizeId           = PrintSizeId | PortraitPrintSizeId
-export type PrintPaperId        = typeof PRINT_PAPERS[number]['id']
+export type PrintSizeId  = typeof PRINT_SIZES[number]['id']
+export type PrintPaperId = typeof PRINT_PAPERS[number]['id']
