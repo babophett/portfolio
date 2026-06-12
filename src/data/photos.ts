@@ -684,20 +684,19 @@ export const PHOTOS: Photo[] = [
 // To add a new size, paste a new object here. It appears in the shop automatically.
 export const PRINT_SIZES = [
   { id: '24x16', label: '24 × 16"',              priceDelta: 0 },
-  { id: '48x32', label: '48 × 32" (4 × 2.7 ft)', priceDelta: 100 },
-  { id: '72x48', label: '72 × 48" (6 × 4 ft)',   priceDelta: 200 },
+  { id: '48x32', label: '48 × 32" (4 × 2.7 ft)', priceDelta: 150 },
+  { id: '72x48', label: '72 × 48" (6 × 4 ft)',   priceDelta: 300 },
 ] as const
 
 export const PORTRAIT_PRINT_SIZES = [
   { id: '16x24', label: '16 × 24"',              priceDelta: 0 },
-  { id: '32x48', label: '32 × 48" (2.7 × 4 ft)', priceDelta: 100 },
-  { id: '48x72', label: '48 × 72" (4 × 6 ft)',   priceDelta: 200 },
+  { id: '32x48', label: '32 × 48" (2.7 × 4 ft)', priceDelta: 150 },
+  { id: '48x72', label: '48 × 72" (4 × 6 ft)',   priceDelta: 300 },
 ] as const
 
 // ── PRINT PAPERS ────────────────────────────────────────────────
 export const PRINT_PAPERS = [
   { id: 'matte',  label: 'Archival matte',    priceDelta: 0 },
-  { id: 'metal',  label: 'Metal (ChromaLuxe)', priceDelta: 40 },
 ] as const
 
 export type PrintSizeId         = typeof PRINT_SIZES[number]['id']
